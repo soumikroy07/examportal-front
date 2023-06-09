@@ -1,0 +1,9 @@
+.table{
+    width: 100%;
+    border: 1px solid rgb(112, 118, 201);
+    border-collapse: collapse;
+}
+.table tr td{
+    padding: 20px;
+    border: .5px solid rgb(185, 195, 214);
+}

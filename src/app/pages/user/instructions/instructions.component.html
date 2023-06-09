@@ -1,0 +1,47 @@
+<div class="bootstrap-wrapper">
+    <div class="container mt10">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>
+                            Read the instructions carefully
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            One more Step to go
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+
+                        <h1>
+                            {{quiz.title}}
+                        </h1>
+                        <p>
+                            {{quiz.description}}
+                        </p>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Important Instructions</h1>
+                        <ul>
+                            <li>This all Quizzes are just for your skill imporvement</li>
+                            <li>You have to complete this assessment within {{quiz.noOfQuestions * 2}} minutes</li>
+                            <li>You can attempt multiple no of times</li>
+                            <li>{{quiz.noOfQuestions}} is available now</li>
+                            <li>Each question carries {{quiz.maxMarks / quiz.noOfQuestions}} marks</li>
+                            <li>No negetive marking for wrong submition</li>
+                            <li>All questions are in MCQ format</li>
+                        </ul>
+                        <mat-divider></mat-divider>
+                    </mat-card-content>
+                    <mat-card-actions class="text-center">
+                        <button mat-raised-button color="primary" 
+                        (click)="startQuiz()"
+                        >
+                            Start Quiz
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

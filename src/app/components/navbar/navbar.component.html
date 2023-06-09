@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+    <a [routerLink]="'/'" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu_book</mat-icon>
+    </a>
+    <span>Examportal</span>
+    <span class="example-spacer"></span>
+    <button *ngIf="!isLoggedIn" mat-flat-button color="primary" (click)="about()">
+        About
+    </button>
+
+    <!-- <a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon mr20">
+        Login
+    </a> -->
+    <button *ngIf="!isLoggedIn" mat-flat-button color="primary" (click)="userLogin()">
+        Login
+    </button>
+    <!-- <a *ngIf="!isLoggedIn" [routerLink]="'/signup'" mat-icon-button class="example-icon favorite-icon ml20"
+        style="margin-right: 50px;" aria-label="Example icon-button with heart icon">
+        Register
+    </a> -->
+
+    <button *ngIf="!isLoggedIn" mat-flat-button color="primary" (click)="userRegister()">
+        Register
+    </button>
+
+    <button (click)="logout()" *ngIf="isLoggedIn" mat-button class="example-icon favorite-icon ml20"
+        aria-label="Example icon-button with heart icon">
+        Logout
+    </button>
+
+    <button *ngIf="isLoggedIn && user" mat-button (click) = "handleUserDashboard()" class="example-icon favorite-icon ml20"
+        aria-label="Example icon-button with heart icon">
+        {{user.username}}
+    </button>
+
+
+
+</mat-toolbar>
